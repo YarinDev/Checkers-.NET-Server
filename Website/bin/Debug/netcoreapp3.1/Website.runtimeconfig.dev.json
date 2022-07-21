@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\yarin\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\yarin\\.nuget\\packages"
+    ]
+  }
+}

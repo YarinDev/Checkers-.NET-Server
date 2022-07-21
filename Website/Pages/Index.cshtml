@@ -1,0 +1,73 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "My Home page";
+}
+
+
+
+<div>
+    <h4 style="color:red;font-style:italic">Welcome Yarin!</h4>
+    <form action="" method="post" autocomplete="on">
+        <table class="my_table_style">
+            <tr>
+@*                <td>@Html.Label("Preson.FName", "First Name")</td>
+*@                <td><label asp-for="Person.FName">Enter Name</label></td>
+@*                <td>@Html.TextBoxFor(m => m.Person.FName, new { @style = "background-color:lightblue", @type = "" })</td>
+*@                <td><input asp-for="Person.FName"/></td>
+                <div>
+                     <span asp-validation-for="Person.FName" class="text-danger"></span>
+                </div>
+               
+            </tr>
+
+            <tr>
+                @*                <td>@Html.LabelFor(m => m.Person.ID)</td>
+                *@
+                <td><label asp-for="Person.ID">Enter ID</label></td>
+                @*  <td>
+        @Html.DropDownListFor(m => m.Person.ID, Enumerable.Range(1, 1000).Select(i => new SelectListItem
+        { Text = i.ToString(), Value = i.ToString() }), new { placeholder = Html.DisplayNameFor(x => x.Person.ID), @class = "form-control" })
+                *@
+            <td> <input asp-for="Person.ID" class="form-control" min="1" max="1000" /></td>
+               
+
+
+                </td>
+            </tr>
+
+            <tr>
+                @*                <td>@Html.LabelFor(m => m.Person.Phone)</td>
+        <td><label asp-for="Person.ID">Enter ID</label></td>
+                        <td><label asp-for="Person.ID">Enter ID</label></td>
+
+                *@
+                <td><label asp-for="Person.Phone">Enter Phone</label></td>
+
+                @*                <td>@Html.TextBoxFor(m => m.Person.Phone, new { @style = "background-color:lightblue", @type = "" })</td>
+                *@
+                <td> <input asp-for="Person.Phone" /></td>
+                <div>
+                    <span asp-validation-for="Person.Phone" class="text-danger"></span>
+                </div>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button asp-page=""autofocus>Register</button></td>
+            </tr>
+        </table>
+    </form>
+    <p>
+        <a href="~/Users">Show Registered Users</a>
+
+    </p>
+    <p>
+        <a href="Privacy">Please press here for privacy</a>
+    </p>
+    <p>
+        <a href="About">Go to About page</a>
+
+    </p>
+    <img src="~/images/privacy.png" alt="Privacy" title="privacy photo of apple" style="max-width:30%; max-height:30%" />
+</div>
