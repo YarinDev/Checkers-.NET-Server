@@ -312,3 +312,8 @@ C:\Users\yarin\source\repos\FinalProject\Website\Website\obj\Debug\netcoreapp3.1
 C:\Users\yarin\source\repos\FinalProject\Website\Website\obj\Debug\netcoreapp3.1\Website.genruntimeconfig.cache
 C:\Users\yarin\source\repos\Website\Website\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\yarin\source\repos\Website\Website\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Games\Create.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Games\Delete.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Games\Details.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Games\Edit.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Games\Index.cshtml.g.cs

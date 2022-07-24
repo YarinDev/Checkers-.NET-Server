@@ -17,5 +17,7 @@ namespace Website.Data
         public DbSet<Website.Model.TblUsers> TblUsers { get; set; }
 
         public DbSet<Website.Model.RandomNum> RandomNum { get; set; }
+
+        public DbSet<Website.Model.TblGames> TblGames { get; set; }
     }
 }
