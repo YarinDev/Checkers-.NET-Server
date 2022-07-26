@@ -12,51 +12,48 @@ namespace Website.Api
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RandomNumController : ControllerBase
+    public class TblGamesController : ControllerBase
     {
         private readonly WebsiteContext _context;
-        Random r = new Random();
 
-
-        public RandomNumController(WebsiteContext context)
+        public TblGamesController(WebsiteContext context)
         {
             _context = context;
         }
 
-        // GET: api/RandomNum
+        // GET: api/TblGames
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RandomNum>>> GetRandomNum()
+        public async Task<ActionResult<IEnumerable<TblGames>>> GetTblGames()
         {
-            return await _context.RandomNum.ToListAsync();
+            return await _context.TblGames.ToListAsync();
         }
 
-        // GET: api/RandomNum/5
+        // GET: api/TblGames/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<RandomNum>> GetRandomNum(int id)
+        public async Task<ActionResult<TblGames>> GetTblGames(int id)
         {
-            var randomNum = await _context.RandomNum.FindAsync(id);
+            var tblGames = await _context.TblGames.FindAsync(id);
 
-            randomNum.Num = r.Next(0, randomNum.Num);
-            if (randomNum == null)
+            if (tblGames == null)
             {
                 return NotFound();
             }
 
-            return randomNum;
+            return tblGames;
         }
 
-        // PUT: api/RandomNum/5
+        // PUT: api/TblGames/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRandomNum(int id, RandomNum randomNum)
+        public async Task<IActionResult> PutTblGames(int id, TblGames tblGames)
         {
-            if (id != randomNum.Id)
+            if (id != tblGames.GameId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(randomNum).State = EntityState.Modified;
+            _context.Entry(tblGames).State = EntityState.Modified;
 
             try
             {
@@ -64,7 +61,7 @@ namespace Website.Api
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!RandomNumExists(id))
+                if (!TblGamesExists(id))
                 {
                     return NotFound();
                 }
@@ -77,37 +74,37 @@ namespace Website.Api
             return NoContent();
         }
 
-        // POST: api/RandomNum
+        // POST: api/TblGames
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<RandomNum>> PostRandomNum(RandomNum randomNum)
+        public async Task<ActionResult<TblGames>> PostTblGames(TblGames tblGames)
         {
-            _context.RandomNum.Add(randomNum);
+            _context.TblGames.Add(tblGames);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetRandomNum", new { id = randomNum.Id }, randomNum);
+            return CreatedAtAction("GetTblGames", new { id = tblGames.GameId }, tblGames);
         }
 
-        // DELETE: api/RandomNum/5
+        // DELETE: api/TblGames/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<RandomNum>> DeleteRandomNum(int id)
+        public async Task<ActionResult<TblGames>> DeleteTblGames(int id)
         {
-            var randomNum = await _context.RandomNum.FindAsync(id);
-            if (randomNum == null)
+            var tblGames = await _context.TblGames.FindAsync(id);
+            if (tblGames == null)
             {
                 return NotFound();
             }
 
-            _context.RandomNum.Remove(randomNum);
+            _context.TblGames.Remove(tblGames);
             await _context.SaveChangesAsync();
 
-            return randomNum;
+            return tblGames;
         }
 
-        private bool RandomNumExists(int id)
+        private bool TblGamesExists(int id)
         {
-            return _context.RandomNum.Any(e => e.Id == id);
+            return _context.TblGames.Any(e => e.GameId == id);
         }
     }
 }

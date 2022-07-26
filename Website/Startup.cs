@@ -27,8 +27,9 @@ namespace Website
         {
             services.AddRazorPages();
 
-            services.AddDbContext<WebsiteContext>(options =>
+            services.AddDbContext< WebsiteContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebsiteContext")));
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

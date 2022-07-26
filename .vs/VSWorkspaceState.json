@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Website",
-    "\\Website\\Api",
-    "\\Website\\Model",
-    "\\Website\\Pages",
-    "\\Website\\Pages\\Users"
+    ""
   ],
-  "SelectedNode": "\\Website\\Api\\TblUsersController.cs",
+  "SelectedNode": "\\Website.sln",
   "PreviewInSolutionExplorer": false
 }

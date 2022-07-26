@@ -9,15 +9,14 @@ namespace Website.Data
 {
     public class WebsiteContext : DbContext
     {
-        public WebsiteContext (DbContextOptions<WebsiteContext> options)
+        public WebsiteContext(DbContextOptions<WebsiteContext> options)
             : base(options)
         {
         }
-
+      
         public DbSet<Website.Model.TblUsers> TblUsers { get; set; }
-
-        public DbSet<Website.Model.RandomNum> RandomNum { get; set; }
-
         public DbSet<Website.Model.TblGames> TblGames { get; set; }
     }
+
 }
+
