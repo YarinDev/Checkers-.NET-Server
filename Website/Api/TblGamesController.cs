@@ -27,7 +27,20 @@ namespace Website.Api
         {
             return await _context.TblGames.ToListAsync();
         }
+        // GET: api/TblGames/getlast/1
 
+        [HttpGet("getlast/{num}")]
+        public async Task<ActionResult<TblGames>> GetLastGameId(int num)
+        {
+            TblGames game = _context.TblGames.OrderByDescending(a => a.GameId).FirstOrDefault();
+            return game;
+        }
+
+
+        public async Task<ActionResult<IEnumerable<TblUsers>>> GetTblUsers(String name)
+        {
+            return await _context.TblUsers.Where(p => p.Name == name).ToListAsync();
+        }
         // GET: api/TblGames/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TblGames>> GetTblGames(int id)
