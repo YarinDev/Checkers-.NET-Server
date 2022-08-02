@@ -10,6 +10,31 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<p>
+    <a href="~/Games/Create">Show Registered Games</a>
+</p>
+
+<p>
+    <a asp-page="" asp-page-handler="Q15">Query15</a>
+</p>
+<p>
+    <a asp-page="PageQ16" asp-page-handler="Q16">Query16</a>
+</p>
+<p>
+    <a asp-page="" asp-page-handler="Q17">Query17</a>
+</p>
+<p>
+    <a asp-page="" asp-page-handler="Q18">Query18</a>
+</p>
+<p>
+    <a asp-page="" asp-page-handler="Q19">Query19</a>
+</p>
+<p>
+    <a asp-page="" asp-page-handler="Q20">Query20</a>
+</p>
+<p>
+    <a asp-page="" asp-page-handler="Q21">Query21</a>
+</p>
 <table class="blueTable">
     <thead>
         <tr>
@@ -22,29 +47,30 @@
             <th>
                 @Html.DisplayNameFor(model => model.TblUsers[0].Phone)
             </th>
-            
+
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.TblUsers) {
-        <tr>
-            <th>
-                @Html.DisplayFor(modelItem => item.Id)
-            </th>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-         
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.TblUsers)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -1,0 +1,31 @@
+﻿@page
+@model Website.Pages.Users.PageQ16Model
+@{
+}
+<table class="blueTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MyA[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MyA[0].Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MyA)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
