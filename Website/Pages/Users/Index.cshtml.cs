@@ -48,13 +48,16 @@ namespace Website.Model.Users
                    LastName = b.LastName
                    }).ToList();*/
         }
-        public async Task OnGetQ17Async()
-        {
-            TblUsers = await _context.TblUsers.ToListAsync();
-        }
+     
         public async Task OnGetQ18Async()
         {
-            TblUsers = await _context.TblUsers.ToListAsync();
+            var x =
+              from u in _context.TblUsers
+              join g in _context.TblGames on u.Id equals g.UserId
+              select new MyA { Name = u.Name, Date = g.Date };
+
+            MyA = await x.ToListAsync();
+           // TblUsers = await _context.TblUsers.ToListAsync();
         }
         public async Task OnGetQ19Async()
         {

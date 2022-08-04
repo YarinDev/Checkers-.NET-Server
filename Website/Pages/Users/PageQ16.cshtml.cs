@@ -21,21 +21,22 @@ namespace Website.Pages.Users
 
         public async Task OnGetAsync()
         {
-            var x =
-                 from u in _context.TblUsers
-                 join g in _context.TblGames on u.Id equals g.UserId
-                 select new MyA { Name = u.Name, Date = g.Date };
+            var ids = _context.TblUsers.Select(row => row.Id).Distinct();
 
-            MyA = await x.ToListAsync();
-            /* var test = (from a in DataContext.User
-                    join b in DataContext.UserTable on a.UserId equals b.UserId
-                    select new
-                    {
-                    UserId = a.UserId,
-                    FirstName = b.FirstName
-                    LastName = b.LastName
-                    }).ToList();*/
+
+            var games =
+                from user in _context.TblUsers
+                from id in ids
+                from game in _context.TblGames
+                       .Where(row => row.UserId == id && row.UserId == user.Id)
+                        .OrderByDescending(row => row.Date)
+                        .Take(1)
+                select new MyA { Name = user.Name, Date = game.Date };
+
+            MyA = await games.ToArrayAsync();
+
+
         }
-    
+
     }
 }
