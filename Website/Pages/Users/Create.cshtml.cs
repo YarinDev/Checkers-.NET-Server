@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Website.Data;
 using Website.Model;
 
@@ -37,9 +39,16 @@ namespace Website.Model.Users
             }
 
             _context.TblUsers.Add(TblUsers);
-            await _context.SaveChangesAsync();
+            try {
+            
+             await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException e)
+            {
+           //     MessageBox.Show(this, "blablablablabla");
+            }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./IdTaken");
         }
     }
 }

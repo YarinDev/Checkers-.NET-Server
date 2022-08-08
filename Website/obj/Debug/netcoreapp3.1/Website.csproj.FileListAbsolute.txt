@@ -318,3 +318,4 @@ C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Games\Edit.cshtml.g.cs
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Games\Index.cshtml.g.cs
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\PageQ16.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\IdTaken.cshtml.g.cs
