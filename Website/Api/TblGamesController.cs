@@ -27,10 +27,10 @@ namespace Website.Api
         {
             return await _context.TblGames.ToListAsync();
         }
-        // GET: api/TblGames/getlast/1
+        // GET: api/TblGames/getlast
 
-        [HttpGet("getlast/{num}")]
-        public async Task<ActionResult<TblGames>> GetLastGameId(int num)
+        [HttpGet("getlast")]
+        public async Task<ActionResult<TblGames>> GetLastGameId()
         {
             TblGames game = _context.TblGames.OrderByDescending(a => a.GameId).FirstOrDefault();
             return game;

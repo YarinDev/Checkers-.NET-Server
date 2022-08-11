@@ -5,19 +5,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Registered Games</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<p>
-    <a asp-page="" asp-page-handler="Q18">Query18</a>
-</p>
-<table class="table">
+<table class="blueTable">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.TblGames[0].UserId)
+            </th> 
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].GameId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TblGames[0].Date)
@@ -36,6 +36,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameId)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)

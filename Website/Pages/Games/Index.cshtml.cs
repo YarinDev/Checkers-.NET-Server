@@ -25,11 +25,6 @@ namespace Website.Pages.Games
         {
             TblGames = await _context.TblGames.ToListAsync();
         }
-        public async Task OnGetQ18Async()
-        {
-            var query = (from r in TblGames orderby r.UserId select r.UserId).Distinct();
-
-           // TblGames = await query.ToListAsync();
-        }
+       
     }
 }
