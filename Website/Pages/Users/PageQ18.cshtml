@@ -1,0 +1,51 @@
+﻿@page
+@model Website.Pages.Users.PageQ18Model
+@{ }
+<h1>Registered Users with Distinct Games</h1>
+<h3>Query 18</h3>
+
+
+<table class="blueTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].GameId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].Length)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].Winner)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.TblGames)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.GameId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Length)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Date)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Winner)
+    </td>
+
+</tr>
+}
+    </tbody>
+</table>

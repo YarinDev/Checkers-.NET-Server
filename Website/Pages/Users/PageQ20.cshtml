@@ -1,0 +1,34 @@
+﻿@page
+@model Website.Q20Model
+@{
+    ViewData["Title"] = "Q20";
+}
+<h1>Registered Users with Amount of Games</h1>
+<h3>Query 20</h3>
+<table class="blueTable">
+    <thead>
+        <tr>
+            <th>
+                <h5>Name</h5>
+            </th>
+            <th>
+                <h5>Number Of Games</h5>
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.TblGames)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Winner)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

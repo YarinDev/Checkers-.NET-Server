@@ -1,0 +1,38 @@
+﻿@page
+@model Website.Q21Model
+@{
+    ViewData["Title"] = "Q21";
+}
+
+<h1>Registered Users with Order by Tables</h1>
+<h3>Query 21</h3>
+@foreach (var table in Model.TblUsers)
+{
+
+    <table class="blueTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TblUsers[0].Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TblUsers[0].Name)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.TblUsers)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}

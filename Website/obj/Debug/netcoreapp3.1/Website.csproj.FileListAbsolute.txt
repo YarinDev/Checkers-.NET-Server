@@ -8,7 +8,6 @@ C:\Users\yarin\source\repos\Website\Website\bin\Debug\netcoreapp3.1\Website.dll
 C:\Users\yarin\source\repos\Website\Website\bin\Debug\netcoreapp3.1\Website.pdb
 C:\Users\yarin\source\repos\Website\Website\bin\Debug\netcoreapp3.1\Website.Views.dll
 C:\Users\yarin\source\repos\Website\Website\bin\Debug\netcoreapp3.1\Website.Views.pdb
-C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Website.csproj.AssemblyReference.cache
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Website.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Website.AssemblyInfoInputs.cache
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Website.AssemblyInfo.cs
@@ -319,3 +318,7 @@ C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\PageQ16.cshtml.g.cs
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\IdTaken.cshtml.g.cs
 C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Queries.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\PageQ18.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\PageQ19.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\PageQ20.cshtml.g.cs
+C:\Users\yarin\source\repos\Website\Website\obj\Debug\netcoreapp3.1\Razor\Pages\Users\PageQ21.cshtml.g.cs
