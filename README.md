@@ -12,7 +12,7 @@ This folder contains only the Client side of the project, Press [**Here**](https
 The **communication** between both sides was implemented by **RESTful Web API Core** (ASP .NET).  
 
 
-The main idea of the project was to create a client-server Checkers game where the user (Client) can sign up for the game and play against the computer (Server).
+The project's main idea was to create a client-server Checkers game where the user (Client) can sign up for the game and play against the computer (Server).
 
 For each step the user makes during the game, the server must do an opposite legal step.
 
